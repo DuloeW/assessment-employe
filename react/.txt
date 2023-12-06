@@ -1,0 +1,1 @@
+merubah table employee (menambahkan field status[aktif/tidak aktif])

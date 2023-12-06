@@ -1,0 +1,35 @@
+quarkus:
+  log:
+    level: INFO
+  http:
+    port: 8123
+    cors:
+      ~: true
+      origins: http://localhost:5173,
+      headers: accept, authorization, content-type, x-requested-with
+      methods: GET, OPTIONS, POST, DELETE, PUT, PATCH
+  requestBody:
+    content:
+      multipart/form-data:
+        schema:
+          type: object
+          properties:
+            # 'file' will be the field name in this multipart request
+            file:
+              type: string
+              format: binary
+  upload:
+    directory: src/main/java/org/acme/uplouds
+  rest-client:
+    "org.acme.constoller.ImageController":
+      url: http://localhost:8123/
+  datasource:
+    db-kind: mysql
+    username: root
+    password: ""
+    jdbc:
+      url: jdbc:mysql://localhost:3306/penilaian_karyawan
+  hibernate-orm:
+    database:
+      generation:
+        ~: none

@@ -1,0 +1,17 @@
+.buble {
+    position: absolute;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    animation: upDown 4s linear infinite;
+}
+
+@keyframes upDown {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-60px);
+    }
+}

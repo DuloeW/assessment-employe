@@ -1,0 +1,39 @@
+.container-popup {
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #272B4E;
+    color: #dbdbdb;
+}
+
+.container-popup-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.message-popup {
+    font-size: 20px;
+    text-align: center;
+}
+
+.popup-button {
+    padding: 5px 25px 5px 25px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: rgb(186, 27, 27);
+    color: #dbdbdb;
+    transition: .3s ease-in-out;
+}
+
+.popup-button:nth-child(2) {
+    background-color: #09b540;
+}

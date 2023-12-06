@@ -1,0 +1,150 @@
+.container-form {
+    width: 100%;
+    padding: 25px;
+    color: #f0f8ff;
+    position: relative;
+}
+
+.container-form form {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "sideone sidetwo"
+        "button button";
+    gap: 50px;
+}
+
+.container-form form .container-input {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.container-form form .container-input input,
+select {
+    padding: 14px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #13173c;
+    color: #c0c0c0;
+    border-radius: 6px;
+}
+
+.container-form form .container-input select option {
+    background-color: #13173c;
+    margin-top: 10px;
+}
+
+.left-side,
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.left-side {
+    grid-area: sideone;
+}
+
+.right-side {
+    grid-area: sidetwo;
+    position: relative;
+}
+
+.container-button {
+    grid-area: button;
+    border-top: 1px solid #13173c;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.container-post-img {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #13173c;
+}
+
+.drop-container {
+    position: relative;
+    display: flex;
+    font: 30px;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.drop-container:hover {
+    background: #eee;
+    border-color: #111;
+}
+
+.drop-container:hover .drop-title {
+    color: #222;
+}
+
+.drop-title {
+    color: #444;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.2s ease-in-out;
+}
+
+.container-post-img .drop-container input {
+    padding: 10px;
+}
+
+.button-click {
+    cursor: pointer;
+    padding: 10px;
+    background: #06a52b;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #c0c0c0;
+}
+
+#icon-post-photo {
+    margin-right: 20px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.drop-container:hover .button-click {
+    background-color: #13173c;
+}
+
+.popup-create {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+}
